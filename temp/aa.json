@@ -1,0 +1,191 @@
+[
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648318_image_31.png",
+    "x": 0,
+    "y": 0,
+    "rotateWidth": 446,
+    "rotateHeight": 145
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648315_image_6.png",
+    "x": 446,
+    "y": 0,
+    "rotateWidth": 35,
+    "rotateHeight": 406
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648320_image_38.png",
+    "x": 0,
+    "y": 406,
+    "rotateWidth": 155,
+    "rotateHeight": 105
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648319_image_34.png",
+    "x": 481,
+    "y": 0,
+    "rotateWidth": 28,
+    "rotateHeight": 37
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648322_image_44.png",
+    "x": 0,
+    "y": 145,
+    "rotateWidth": 260,
+    "rotateHeight": 260
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648316_image_16.png",
+    "x": 260,
+    "y": 145,
+    "rotateWidth": 184,
+    "rotateHeight": 188
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648316_image_18.png",
+    "x": 155,
+    "y": 405,
+    "rotateWidth": 156,
+    "rotateHeight": 107
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648318_image_29.png",
+    "x": 311,
+    "y": 333,
+    "rotateWidth": 130,
+    "rotateHeight": 177
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648315_image_11.png",
+    "x": 441,
+    "y": 406,
+    "rotateWidth": 71,
+    "rotateHeight": 82
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648324_image_57.png",
+    "x": 260,
+    "y": 333,
+    "rotateWidth": 23,
+    "rotateHeight": 61
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648318_image_32.png",
+    "x": 283,
+    "y": 333,
+    "rotateWidth": 26,
+    "rotateHeight": 34
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648319_image_33.png",
+    "x": 283,
+    "y": 367,
+    "rotateWidth": 26,
+    "rotateHeight": 34
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648312_image_0.png",
+    "x": 441,
+    "y": 488,
+    "rotateWidth": 34,
+    "rotateHeight": 19
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648323_image_50.png",
+    "x": 481,
+    "y": 37,
+    "rotateWidth": 31,
+    "rotateHeight": 34
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648319_image_36.png",
+    "x": 475,
+    "y": 488,
+    "rotateWidth": 36,
+    "rotateHeight": 19
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648318_image_30.png",
+    "x": 260,
+    "y": 394,
+    "rotateWidth": 6,
+    "rotateHeight": 6
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648319_image_35.png",
+    "x": 481,
+    "y": 71,
+    "rotateWidth": 24,
+    "rotateHeight": 24
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648325_image_58.png",
+    "x": 481,
+    "y": 95,
+    "rotateWidth": 23,
+    "rotateHeight": 26
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648316_image_14.png",
+    "x": 481,
+    "y": 121,
+    "rotateWidth": 21,
+    "rotateHeight": 17
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648313_image_1.png",
+    "x": 481,
+    "y": 138,
+    "rotateWidth": 19,
+    "rotateHeight": 34
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648319_image_37.png",
+    "x": 481,
+    "y": 172,
+    "rotateWidth": 19,
+    "rotateHeight": 36
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648322_image_43.png",
+    "x": 481,
+    "y": 208,
+    "rotateWidth": 19,
+    "rotateHeight": 35
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648313_image_2.png",
+    "x": 481,
+    "y": 243,
+    "rotateWidth": 18,
+    "rotateHeight": 18
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648324_image_54.png",
+    "x": 481,
+    "y": 261,
+    "rotateWidth": 18,
+    "rotateHeight": 18
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648325_image_59.png",
+    "x": 481,
+    "y": 279,
+    "rotateWidth": 18,
+    "rotateHeight": 18
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648316_image_15.png",
+    "x": 481,
+    "y": 297,
+    "rotateWidth": 17,
+    "rotateHeight": 21
+  },
+  {
+    "path": "F:\\demo\\temp\\trimImages\\spritesheet_js_1523279648322_image_42.png",
+    "x": 481,
+    "y": 318,
+    "rotateWidth": 14,
+    "rotateHeight": 33
+  }
+]

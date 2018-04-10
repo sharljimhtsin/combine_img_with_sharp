@@ -57,6 +57,7 @@ function(cb){
 		async.series([function(resizeCb){
 			if(rotated){
 				sharp(path)
+				.rotate(90)
 				.resize(rotateWidth, rotateHeight)
 				.background({r: 0, g: 0, b: 0, alpha: 0})
 				.embed()

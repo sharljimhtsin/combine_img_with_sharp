@@ -20,6 +20,7 @@ function(cb){
 	  var path = img["path"];
 	  var x = img["x"];
 	  var y = img["y"];
+	  var rotated = img["rotated"];
 	  var rotateWidth = img["rotateWidth"];
 	  var rotateHeight = img["rotateHeight"];
 	}
@@ -44,14 +45,33 @@ function(cb){
 function(cb){
 	async.eachSeries(imgList,function(img,innerCb){
 		console.log(img);
+		var path = img["path"];
+		var x = img["x"];
+		var y = img["y"];
+		var width = img["trim"]["width"];
+		var height = img["trim"]["height"];
+		var rotateWidth = img["rotateWidth"];
+		var rotateHeight = img["rotateHeight"];
+		var rotated = img["rotated"];
 		var imgObjBuffer;
 		async.series([function(resizeCb){
-			sharp(img["path"])
-			.resize(img["rotateWidth"], img["rotateHeight"])
-			.toBuffer(function(err, data, info){
+			if(rotated){
+				sharp(path)
+				.resize(rotateWidth, rotateHeight)
+				.background({r: 0, g: 0, b: 0, alpha: 0})
+				.embed()
+				.toBuffer(function(err, data, info) {
 				imgObjBuffer = data;
 				resizeCb(err);
-			});
+				});
+			}else{
+				sharp(path)
+				.resize(width, height)
+				.toBuffer(function(err, data, info){
+					imgObjBuffer = data;
+					resizeCb(err);
+				});
+			}
 		},
 		function(processCb){
 			sharp(finalImg)

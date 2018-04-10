@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.6.0",
-    "merge-images": "^1.1.0",
     "sharp": "^0.20.1"
   }
 }

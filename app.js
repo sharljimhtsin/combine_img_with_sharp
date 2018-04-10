@@ -43,6 +43,7 @@ function(cb){
 	});
 },
 function(cb){
+	var i = 0;
 	async.eachSeries(imgList,function(img,innerCb){
 		console.log(img);
 		var path = img["path"];
@@ -81,6 +82,14 @@ function(cb){
 				finalImg = data;
 				processCb(err);
 			});
+		},
+		function(debugCb){
+			sharp(finalImg)
+			.resize(3000, 2000)
+			.toFile(i+'_output.jpg', function(err) {
+				debugCb(err);
+			});
+			i++;
 		}],innerCb);
 	},cb);
 },
@@ -91,7 +100,7 @@ function(cb){
 		// output.jpg is a 3000 pixels wide and 2000 pixels high image
 		// containing a scaled and cropped version of input.jpg
 		cb(err);
-  });
+	});
 }],function(err){
 	console.log("end");
 });

@@ -57,11 +57,32 @@ function(cb){
 		var imgObjBuffer;
 		async.series([function(resizeCb){
 			if(rotated){
+				var widthPadding = Math.round((rotateWidth - width) / 2);
+				var heightPadding = Math.round((rotateHeight - height) / 2);
+				console.log(widthPadding);
+				console.log(heightPadding);
+				var paddingConfig = []; //{top: heightPadding, bottom: heightPadding, left: widthPadding, right: widthPadding}
+				if(widthPadding > 0){
+					paddingConfig["left"] = widthPadding;
+					paddingConfig["right"] = widthPadding;
+				}else{
+					paddingConfig["left"] = 1;
+					paddingConfig["right"] = 1;					
+				}
+				if(heightPadding > 0){
+					paddingConfig["top"] = heightPadding;
+					paddingConfig["bottom"] = heightPadding;
+				}else{
+					paddingConfig["top"] = 1;
+					paddingConfig["bottom"] = 1;					
+				}
 				sharp(path)
 				.rotate(90)
 				.resize(rotateWidth, rotateHeight)
 				.background({r: 0, g: 0, b: 0, alpha: 0})
-				.embed()
+				// Resize to 140 pixels wide, then add 10 transparent pixels
+				// to the top, left and right edges and 20 to the bottom edge
+				.extend(paddingConfig)
 				.toBuffer(function(err, data, info) {
 				imgObjBuffer = data;
 				resizeCb(err);
@@ -84,7 +105,7 @@ function(cb){
 		},
 		function(processCb){
 			sharp(finalImg)
-			.overlayWith(imgObjBuffer, {top:img["x"],left:img["y"]})
+			.overlayWith(imgObjBuffer, {top:img["y"],left:img["x"]})
 			.toBuffer(function(err, data, info){
 				finalImg = data;
 				processCb(err);
@@ -105,6 +126,7 @@ function(cb){
 	.resize(3000, 2000)
 	.background({r: 0, g: 0, b: 0, alpha: 0})
 	.embed()
+	.trim()
 	.toFile('output.jpg', function(err) {
 		// output.jpg is a 3000 pixels wide and 2000 pixels high image
 		// containing a scaled and cropped version of input.jpg

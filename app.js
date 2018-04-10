@@ -33,7 +33,7 @@ function(cb){
 		width: 3000,
 		height: 2000,
 		channels: 4,
-		background: { r: 255, g: 0, b: 0, alpha: 128 }
+		background: {r: 0, g: 0, b: 0, alpha: 0}
 	  }
 	})
 	.png()
@@ -69,11 +69,18 @@ function(cb){
 			}else{
 				sharp(path)
 				.resize(width, height)
+				.ignoreAspectRatio()
 				.toBuffer(function(err, data, info){
 					imgObjBuffer = data;
 					resizeCb(err);
 				});
 			}
+		},
+		function(debugCb){
+			sharp(imgObjBuffer)
+			.toFile(i+'_item_output.jpg', function(err) {
+				debugCb(err);
+			});
 		},
 		function(processCb){
 			sharp(finalImg)
@@ -96,11 +103,13 @@ function(cb){
 function(cb){
 	sharp(finalImg)
 	.resize(3000, 2000)
+	.background({r: 0, g: 0, b: 0, alpha: 0})
+	.embed()
 	.toFile('output.jpg', function(err) {
 		// output.jpg is a 3000 pixels wide and 2000 pixels high image
 		// containing a scaled and cropped version of input.jpg
 		cb(err);
 	});
 }],function(err){
-	console.log("end");
+	console.log("end",err);
 });
